@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    
+}
+
+.form-controller {
+    display: flex;
+    justify-content: center;
+    top: 30%;
+    left: 37.5%;
+    background: -webkit-linear-gradient(left bottom, #032332, #39606F);
+    width: 25%;
+    height: 40%;  
+    position: fixed;
+}
+
+.formulario {
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.div-input-text, .div-input-password {
+    background-color: white;
+    border: solid white;
+    margin: 5% 0; 
+    border-radius: 5px;
+    height: 40px;
+
+}
+
+.input-text, .input-password {
+    border: none;
+    height: 100%;
+    width: 90%;
+    padding-left: 10px;
+}
+
+.btn-controller {
+    background-color: #F77B5F;
+    height: 40px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+

@@ -10,18 +10,64 @@
     <link rel="stylesheet" href="/css/normalize.css">
 </head>
 <body>
-    <div class="form-controller">
-        <form action="#" method="get" class="formulario">
-            <div class="div-input-text">
-                <label><i class="fa-solid fa-user"></i><input class="input-text" type="text" placeholder="Nombre de Usuario"></label>
+    <header>
+        <div class="main-header">
+            <div class="main-hamburguer">
+                <!--El boton Hamburguesa, que despliega el menu de opciones en la vista movile/tablets-->
+                <a href="#" class="hamburguer-buttom"><i class="fa-solid fa-bars"></i></a>
+                <p>Menú</p>
             </div>
-            <div class="div-input-password">
-                <label><i class="fa-solid fa-lock"></i><input class="input-password" type="password" placeholder="Constraseña"></label>
+            <div class="main-logo">
+                <a href="/"><img src="/images/logo-mercado-liebre.svg" alt="Optica RIFF"></a>
             </div>
-            <div class="btn-div">
-                <button class="btn-controller" type="button">LOGIN</button>
+            <div class="main-buscar-carrito">
+                <a href="#"><i class='fa-solid fa-magnifying-glass'></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
-        </form>
-    </div>
+        </div>    
+        <nav class="main-navbar">
+            <ul class="navbar-left">
+                <!--Aca ya estan creados algunos de los links que vamos a poner, hay que ver bien los nombre y ponerlos-->
+                <li><a href="#">links</a></li>
+                <li><a href="#">links</a></li>
+                <li><a href="#">links</a></li>
+                <li><a href="#">links</a></li>
+                <li><a href="#">links</a></li>
+            </ul>
+            <ul class="navbar-right">
+                <li>
+                    <form action="/" method="get">
+                        <div class="buscar-productos">
+                            <!--Input text para el buscador-->
+                            <input class="buscar-productos" value="" type="text" placeholder="Buscar productos.."><a href="#"><i class='fa-solid fa-magnifying-glass'></i></a>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-controller">
+            <form action="#" method="get" class="formulario">
+                <div class="div-input-text">
+                    <label><i class="fa-solid fa-user"></i><input class="input-text" type="text" placeholder="Nombre de Usuario"></label>
+                </div>
+                <div class="div-input-password">
+                    <label><i class="fa-solid fa-lock"></i><input class="input-password" type="password" placeholder="Constraseña"></label>
+                </div>
+                <div class="btn-checkbox">
+                    <label><input type="checkbox">Mantener Sesion Iniciada</label>
+                </div>
+                <div class="btn-div">
+                    <button class="btn-controller" type="button">LOGIN</button>
+                </div>
+                <div class="btn-google-facebook">
+                    <button class="btn-google" type="button"><i class="fa-brands fa-google"></i></button>
+                    <button class="btn-facebook" type="button"><i class="fa-brands fa-facebook-f"></i></button>
+                </div>
+            </form>
+            <p class="volver-home"><a href="/"><--Back To Home</a></p>
+        </div>
+    </main>
 </body>
 </html>

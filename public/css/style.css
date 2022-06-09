@@ -22,7 +22,7 @@ body {
 
 .main-header-top-bar {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
 }
@@ -38,14 +38,15 @@ body {
 }
 
 .main-logo {
-    width: 30%;
+    width: 50%;
+    padding-right: 10px;
 }
 
 .div-form-buscar-productos {
     background-color: white;
     border: solid #EAC926 2px;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
     height: 40px;
     position: relative;
     padding: 7px 10px;
@@ -56,16 +57,17 @@ body {
     right: 0;
     color: lightgrey;
     padding-right: 5px;
-    padding-top: 2px;
+    margin-top: 5px;
 }
 
 .buscar-productos {
     border: none;
     width: 90%;
+    margin-top: 5px;
 }
 
 .copy-header {
-    font-size: 14px;
+    font-size: 13px;
     text-align: center;
     color: #000000;
     margin: 1em;
@@ -114,17 +116,36 @@ section img {
     background-color: white;
     padding-bottom: 10px;
     margin: 10px 0;
+    position: relative;
 }
 
 .main-section-info {
+    display: flex;
     border-top: #ebebeb solid 1px;
-    padding: 15px;
+    padding-top: 15px;
+}
+
+.informacion-precio-descuento {
+    display: flex;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 87.5vw;
 }
 
 section p {
     margin-left: 1em;
-    display: inline;
-    /* justify-content: space-between; */
 }
 
 section .precio-producto {
@@ -132,7 +153,7 @@ section .precio-producto {
     font-weight: bold;
 }
 
-section h3 {
+.section-h3 {
     font-size: 16px;
     display: none;
 }
@@ -143,32 +164,10 @@ section .descuento-producto {
     color: #39b54a;
 }
 
-section i {
-    color: #39b54a;
-    border: solid #39b54a 1px;
-    border-radius: 50%;
-    padding: 5px;
-}
-
-.hr-left  {
-    width: 16em;
-    margin-left: 0%;
-    border-color: #ebebeb;
-    display: inline-block;
-    opacity: 0.3;
-}
-
-.hr-right  {
-    width: 2.3em;
-    margin-right: 0%;
-    border-color: #ebebeb;
-    display: inline-block;
-    opacity: 0.3;
-}
-
 footer {
     display: flex;
     flex-wrap: wrap;
+    background-color: #FFFFFF;
 }
 
 footer ul {
@@ -178,16 +177,16 @@ footer ul {
     max-width: 100%;
     flex-wrap: wrap;
     padding: 2em 1.1em 0em 1.1em;
-    /* margin: 0; */
 }
 
 footer li {
-    margin-bottom: 2em;
+    margin: 0 auto 2em;
+    width: 85%;
 }
 
 footer li h4 {
     margin-bottom: 10px;
-    font-size: 2em;
+    font-size: 14px;
 }
 
 footer ul i {
@@ -207,103 +206,147 @@ footer h5 {
     .main-header {
         position: fixed;
         padding: 0.5em;
+        z-index: 10;
     }
+
+    .main-header-div-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .main-header-top-bar {
         flex-wrap: nowrap;
         justify-content: space-between;
+        width: 55%;
     }
+
     .main-logo  {
-        width: 10em;
+        width: 13em;
         padding: 0 0.5em;
     }
+
     .div-form-buscar-productos {
         width: 16em;
-        height: 34px;
+        height: 40px;
     }
 
     .hamburguer-buttom {
         display: none;
     }
+
     .copy-header {
         font-size: 14px;
         margin: 0;
-        /* text-align: right; */
     }
+
     .main-navbar {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-top: 0.6em;
-        font-size: 0.9em;
+        font-size: 1.2em;
     }
+
     .main-navbar ul {
         display: flex;
         flex-direction: row;
         list-style: none;
     }
+
     .left-navbar {
         padding-left: 1.4em;
     }
+
     .main-navbar ul li {
         padding-right: 0.5em;
     }
+
     .main-navbar a {
         color: black;
         text-decoration: none;
     }
+
     .main-navbar i {
         margin-left: 0.3em;
     }
+
     .main-main {
         width: 100%;
-        padding-top: 4.96em;
+        padding-top: 6.4em;
     }
+
     section {
         display: flex;
         justify-content: center;
         flex-direction: column;
     }
+
     section .main-section-div {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
+
     .main-section-product {
         margin: 2%;
         padding-bottom: 1em;
-        width: 13.4em;
+        width: 20em;
         box-shadow : 0px 0px 10px rgb(100, 100, 100);
     }
+
     .main-section-img {
         display: flex;
         justify-content: center;
     }
-    .hr-left {
-        width: 8.5em;
-        padding: 0.1em 0;
+
+    .main-section-info {
+        padding: 15px;
+        flex-direction: column;
     }
-    .hr-right {
-        width: 2.1em;
-        padding: 0.1em 0;
+
+    main section article i{
+        top: 225px;
     }
+
+    section p {
+        margin: 0;
+    }
+
+    .descuento-producto {
+        margin-left: 10px;
+    }
+
+    .section-h3 {
+        display: initial;
+        margin-top: 5px;
+    }
+
     footer ul {
         list-style: none;
         display: flex;
         flex-wrap: nowrap;
         padding: 1em 1em 0em;
     }
+ 
     footer ul i {
         font-size: 30px;
     }
+ 
     footer li {
-        margin: 0em 0.7em;
+        margin: 0em 1em;
+        width: 100%;
     }    
+ 
     footer li h4 {
         margin-top: 0.5em;
-        font-size: 1em;
+        font-size: 1.3em;
     }
+ 
     footer li p {
-        font-size: 0.7em;
+        font-size: 1em;
     }    
+ 
     footer h5 {
         padding-left: 1.5em;
     }
@@ -311,46 +354,45 @@ footer h5 {
 
 @media (min-width: 769px) {
     .main-header-top-bar {
-        justify-content: space-between;
+        width: 65%;
     }
-    .copy-header {
-        font-size: 1.5em;
-    }
-    .main-logo  {
-        width: 13em;
-        padding: 0 0.5em;
-    }
+
     .div-form-buscar-productos {
-        width: 35em;
+        width: 30em;
     }
-    .main-navbar {
-        font-size: 1.2em;
-    }
+
     section .main-section-div {
         justify-content: center;
+        flex-wrap: nowrap;
     }
+
     .main-section-product {
         margin: 1%;
         width: 20em;
     }
-    .hr-left {
-        width: 15em;
+
+    main section article i{
+        top: 68%;
     }
+
     footer {
         justify-content: center;
-        height: 15em;
     }
+
     footer ul {
-        width: 65%;
-        margin: 1em 20em 0em;
+        width: 85%;
+        margin: 1em;
     }
+
     footer li h4 {
         font-size: 1.5em;
     }
+
     footer li p {
         font-size: 1em;
     }
-    footer h5 {
-        padding-left: 0;
-    }
+
+    .copyright {
+        width: 100%;
+     }
 }

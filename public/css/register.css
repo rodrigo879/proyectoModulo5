@@ -80,16 +80,16 @@ main {
     margin: auto;
 }
 
-.ruta-login {
+.ruta-register {
     margin: 20px auto;
 }
 
-.ruta-login, .ruta-login a {
+.ruta-register, .ruta-register a {
     text-decoration: none;
     color: #ADB2B5;
 }
 
-.ruta-login p {
+.ruta-register p {
     display: inline-block;
     font-weight: bold;
     color: #8f8f8f;
@@ -118,7 +118,7 @@ main {
     border-bottom: #FFFFFF;
 }
 
-.div-input-text, .div-input-password {
+.div-input-text, .div-input-email, .div-input-phone, .div-input-password {
     background-color: white;
     border: solid white;
     margin: 5% 0; 
@@ -126,21 +126,15 @@ main {
     height: 40px;
 }
 
-.input-text, .input-password {
+.input-text, .input-email, .input-phone, .input-password {
     border: none;
     height: 100%;
     width: 90%;
     padding-left: 10px;
 }
 
-.div-input-text i, .div-input-password i {
+.div-input-text i, .div-input-email i, .div-input-phone i, .div-input-password i {
     margin: 0 1vw;
-}
-
-.div-input-password p {
-    margin: 5px 0px;
-    color: #ADB2B5;
-    font-weight: bold;
 }
 
 .checkbox {
@@ -221,9 +215,10 @@ input[type=checkbox] {
 	font-weight: bold;
 }
 
-.btn-login {
-    background-color: #F77B5F;
-    border-color: #F77B5F;
+.btn-register {
+    background-color: #43C474;
+    border-color: #43C474;
+    color: #032332;
     height: 40px;
     border-radius: 5px;
     width: 100%;
@@ -232,41 +227,11 @@ input[type=checkbox] {
     box-shadow: 2px 2px 5px #8f8f8f;
 }
 
-.btn-google-facebook {
-    display: flex;
-    margin-top: 20px;
-    box-shadow: 2px 2px 5px #8f8f8f;
-}
-
-.btn-google {
-    background-color: #B03A2C;
-    border-color: #B03A2C;
-    color: #FFFFFF;
-    height: 40px;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 20px;
-    font-weight: bold;
-    
-}
-
-.btn-facebook {
-    background-color: #3B5999;
-    border-color: #3B5999;
-    color: #FFFFFF;
-    height: 40px;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 20px;
-    font-weight: bold;
-    
-}
-
-.redirection-create-account {
+.redirection-login {
     margin-top: 15px;
 }
 
-.redirection-create-account p, .redirection-create-account a, .redirection-create-account i {
+.redirection-login p, .redirection-login a, .redirection-login i {
     font-size: 14px;
     font-weight: bold;
     color: #ADB2B5;

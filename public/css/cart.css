@@ -1,3 +1,7 @@
+body {
+  background-color: #ADB2B5;
+}
+
 #grid {
     display: grid;
     height: 200px;
@@ -6,7 +10,10 @@
   }
   
   #grid > div {
-    background-color: lime;
+    background-color: #39606F;
+    display: grid;
+    justify-content: center;
+    align-content: center;
   }
 
   .grid1 {
@@ -14,15 +21,22 @@
       height: 50px;
       grid-template: repeat(1, 1fr) / repeat(3, 1fr);
       grid-gap: 20px 4px;
+      align-items: center;
+
   }
 
   .grid1 > div, .grid2 > div {
-      background-color: red;
+      background-color: #B03A2C;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
   }
 
   .grid2 {
     display: grid;
-    height: 50px;
+    height: 56px;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    grid-gap: 20px 4px;
+    grid-gap: 16px 4px;
+    align-content: space-around;
+    justify-items: stretch;
 }

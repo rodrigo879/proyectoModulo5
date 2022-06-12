@@ -67,7 +67,7 @@ header {
 
 main {
     margin: 2vw;
-    height: 90vh;
+    /* height: 90vh; */
 }
 
 .form-controller {
@@ -76,8 +76,9 @@ main {
     flex-direction: column;
     background: linear-gradient(to left bottom, #032332, #39606F);
     width: 100%;
-    height: 100%;  
+    /* height: 100%;   */
     margin: auto;
+    /* min-height: 750px; */
 }
 
 .ruta-login {

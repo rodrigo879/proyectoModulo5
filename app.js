@@ -12,8 +12,16 @@ app.get('/login.html', function(req,res){
     res.sendFile(path.resolve(__dirname,'./views/login.html'))
 })
 
+app.get('/register.html', function(req,res){
+    res.sendFile(path.resolve(__dirname,'./views/register.html'))
+})
+
 app.get('/cart.html', function(req,res){
     res.sendFile(path.resolve(__dirname,'./views/cart.html'))
+})
+
+app.get('/productCart.html', function(req,res){
+    res.sendFile(path.resolve(__dirname,'./views/productCart.html'))
 })
 
 app.listen(3000, function(){

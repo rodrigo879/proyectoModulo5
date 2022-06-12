@@ -3,40 +3,39 @@ body {
 }
 
 #grid {
-    display: grid;
-    height: 200px;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-    grid-gap: 20px 5px;
-  }
-  
-  #grid > div {
-    background-color: #39606F;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-  }
-
-  .grid1 {
-      display: grid;
-      height: 50px;
-      grid-template: repeat(1, 1fr) / repeat(3, 1fr);
-      grid-gap: 20px 4px;
-      align-items: center;
-
-  }
-
-  .grid1 > div, .grid2 > div {
-      background-color: #B03A2C;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-  }
-
-  .grid2 {
-    display: grid;
-    height: 56px;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    grid-gap: 16px 4px;
-    align-content: space-around;
-    justify-items: stretch;
+  display: grid;
+  height: 300px;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-gap: 20px 5px;
+  text-align: center;
 }
+  
+#grid > div {
+  background-color: lime;
+}
+
+.grid1 {
+  display: grid;
+  height: 100px;
+  grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+  grid-gap: 20px 4px;
+  align-items: center;
+}
+
+.grid1 > div, .grid2 > div {
+    background-color: red;
+}
+
+.grid2 {
+  display: grid;
+  height: 100px;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-gap: 20px 4px;
+  align-items: center;
+}
+
+.div-solo {
+  display: grid;
+  align-items: center;
+}
+

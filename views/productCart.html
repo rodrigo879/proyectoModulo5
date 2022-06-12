@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Product</title>
+    <link rel="stylesheet" href="/css/productCart.css">
+    <script src="https://kit.fontawesome.com/a281ea592b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="main-header">
+            <div class="main-hamburguer">
+                <!--El boton Hamburguesa, que despliega el menu de opciones en la vista movile/tablets-->
+                <a href="#" class="hamburguer-buttom"><i class="fa-solid fa-bars"></i></a>
+                <p>Menú</p>
+            </div>
+            <div class="main-logo">
+                <a href="/"><img src="/images/logo.png" alt="Optica RIFF"></a>
+            </div>
+            <div class="main-buscar-carrito">
+                <a href="#"><i class='fa-solid fa-magnifying-glass'></i></a>
+            </div>
+        </div>    
+        <nav class="main-navbar">
+            <ul class="navbar-left">
+                <!--Aca ya estan creados algunos de los links que vamos a poner, hay que ver bien los nombre y ponerlos-->
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Anteojos Recetados</a></li>
+                <li><a href="#">Anteojos para Sol</a></li>
+                <li><a href="#">Lentes de Contacto</a></li>
+                <li><a href="#">Accesorios</a></li> 
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <ul class="navbar-right">
+                <li>
+                    <form action="#" method="get" class="buscador">   
+                        <!--Input text para el buscador-->
+                        <div class="buscar-productos">
+                            <input id="search" class="buscar-productos" name="search" value="" type="text" placeholder="Buscar productos.."><a href="#"><i class='fa-solid fa-magnifying-glass'></i></a>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <div class="productos">
+                    Producto 1
+                </div>
+                <div class="productos">
+                    Producto 2
+                </div>
+                <div class="productos">
+                    Producto 3
+                </div>
+            </section>
+            <div class="total-productos">
+                <h5>
+                    <span>Subtotal:</span>
+                    <strong>$</strong>
+                </h5>
+            </div>
+            <div class="medios-envio">
+                
+            </div>
+            <div class="formulario">
+                <div class="btn-agregarProductos-finalizar">
+                    <button id="btn-agregarProductos" class="btn-agregarProductos" type="button">AGREGAR MAS PRODUCTOS</button>
+                    <button id="btn-finalizar" class="btn-finalizar" type="button">FINALIZAR</i></button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

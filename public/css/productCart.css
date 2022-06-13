@@ -80,6 +80,21 @@ main {
     margin: auto;
 }
 
+.ruta-cart {
+    margin: 20px auto;
+}
+
+.ruta-cart, .ruta-cart a {
+    text-decoration: none;
+    color: #ADB2B5;
+}
+
+.ruta-cart p {
+    display: inline-block;
+    font-weight: bold;
+    color: #8f8f8f;
+}
+
 section {
     height: 100%;
     margin: 10px;
@@ -102,6 +117,15 @@ section {
     justify-content: space-evenly;
 }
 
+.info-top button {
+    color: #FFFFFF;
+    background-color: #B03A2C;
+    border-radius: 3px;
+    border: none;
+    padding: 2px;
+    width: 20px;
+}
+
 .info-top, .info-bottom {
     display: flex;
     width: 100%;
@@ -115,11 +139,20 @@ section {
 }
 
 .btn-controller-cant p{
-    width: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.btn-controller-cant input {
-    width: 10%;
+.btn-controller-cant-unid {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.btn-controller-cant input, .btn-controller-cant-unid button {
+    width: 30%;
+    text-align: center;
 }
 
 .container-imagenes {
@@ -132,44 +165,114 @@ section {
     width: 100%;
 }
 
-.formulario {
-    justify-content: center;
-    flex-direction: column;
-    margin: 10vw auto;
-    width: 75%;
-    height: 85% ;
-    border-bottom: #FFFFFF;
-}
-
-.total-productos {
+.subtotal-productos {
     border-top: 1px solid #ADB2B5;
     border-bottom: 1px solid #ADB2B5;
-    height: 90px;
+    height: 40px;
     display: flex;
     align-items: center;
     margin: 0 10px;
 
 }
 
-.total-productos h5 {
+.subtotal-productos h5 {
     width: 100%;
     display: flex;
 }
 
-.total-productos span, .total-productos strong {
+.subtotal-productos span, .subtotal-productos strong {
     width: 50%;
-    font-size: 30px;
+    font-size: 18px;
     color: #ADB2B5;
 }
 
-.total-productos strong {
+.subtotal-productos strong {
     display: flex;
     justify-content: end;
 }
 
+/* .medios-envio {
+    display: flex;
+    justify-content: center;
+} */
+
+.cp-calcular-envio {
+    display: flex;
+    /* box-shadow: 2px 2px 5px #8f8f8f; */
+    width: 80%;
+    justify-content: center;
+    margin: 20px auto 0px;
+}
+
+.codigo-postal input {
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    background-color: #000000;
+    border-color: #000000;
+    color: #ADB2B5;
+    height: 38px;
+    width: 100%;
+}
+
+.calcular-envio {
+    width: 50%;
+}
+
+.btn-calcular {
+    background-color: #F6C01C;
+    border-color: #F6C01C;
+    color: #032332;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.medios-envio a {
+    margin-left: 41px;
+    text-decoration: none;
+    color: #8f8f8f;
+
+}
+
+.total-productos-envio {
+    border-top: 1px solid #ADB2B5;
+    border-bottom: 1px solid #ADB2B5;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 2vw 10px;
+
+}
+
+.total-productos-envio h5 {
+    width: 100%;
+    display: flex;
+}
+
+.total-productos-envio span, .total-productos-envio strong {
+    width: 50%;
+    font-size: 25px;
+    color: #000000;
+}
+
+.total-productos-envio strong {
+    display: flex;
+    justify-content: end;
+}
+
+.formulario {
+    justify-content: center;
+    flex-direction: column;
+    margin: 5vw auto;
+    width: 75%;
+    height: 85% ;
+    border-bottom: #FFFFFF;
+}
+
 .btn-agregarProductos-finalizar {
     display: flex;
-    margin-top: 20px;
     box-shadow: 2px 2px 5px #8f8f8f;
 }
 
@@ -194,3 +297,4 @@ section {
     font-size: 14px;
     font-weight: bold;
 }
+

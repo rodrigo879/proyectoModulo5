@@ -21,6 +21,7 @@
             </div>
             <div class="main-buscar-carrito">
                 <a href="#"><i class='fa-solid fa-magnifying-glass'></i></a>
+                <a href="/login.html"><i class="fa-solid fa-user"></i></a>
             </div>
         </div>    
         <nav class="main-navbar">
@@ -48,19 +49,22 @@
     </header>
     <main>
         <div class="container">
+            <div class="ruta-cart">
+                <a href="/">Home</a>/<p>Cart</p>
+            </div>
             <section>
                 <div class="productos">
                     <div class="container-imagenes"><img src="/images/P2PEVK0.jpg"></div>
                     <div class="container-info">
                         <div class="info-top">
                             <p>Descripcion del producto</p>
-                            <button type="button">X</button>
+                            <button type="button">x</button>
                         </div>
                         <div class="info-bottom">
                             <div class="btn-controller-cant">
                                 <div class="btn-controller-cant-unid">
                                     <button type="button">-</button>
-                                    <input type="text" placeholder="0" readonly>
+                                    <input type="text" placeholder="1" readonly>
                                     <button type="button">+</button>
                                 </div>
                                 <p>$ 10.850,00</p>
@@ -73,13 +77,13 @@
                     <div class="container-info">
                         <div class="info-top">
                             <p>Descripcion del producto</p>
-                            <button type="button">X</button>
+                            <button type="button">x</button>
                         </div>
                         <div class="info-bottom">
                             <div class="btn-controller-cant">
                                 <div class="btn-controller-cant-unid">
                                     <button type="button">-</button>
-                                    <input type="text" placeholder="0" readonly>
+                                    <input type="text" placeholder="1" readonly>
                                     <button type="button">+</button>
                                 </div>
                                 <p>$ 21.500,00</p>
@@ -92,13 +96,13 @@
                     <div class="container-info">
                         <div class="info-top">
                             <p>Descripcion del producto</p>
-                            <button type="button">X</button>
+                            <button type="button">x</button>
                         </div>
                         <div class="info-bottom">
                             <div class="btn-controller-cant">
                                 <div class="btn-controller-cant-unid">
                                     <button type="button">-</button>
-                                    <input type="text" placeholder="0" readonly>
+                                    <input type="text" placeholder="1" readonly>
                                     <button type="button">+</button>
                                 </div>
                                 <p>$ 13.475,00</p>
@@ -107,23 +111,39 @@
                     </div>
                 </div>
             </section>
-            <div class="total-productos">
+            <div class="subtotal-productos">
                 <h5>
                     <span>Subtotal:</span>
                     <strong>$ 45.825,00</strong>
                 </h5>
             </div>
             <div class="medios-envio">
-                
+                <div class="cp-calcular-envio">
+                    <div class="codigo-postal">
+                        <input type="text" placeholder="Enter Zip Code">
+                    </div>
+                    <div class="calcular-envio">
+                        <button class="btn-calcular">CALCULATE</button>
+                    </div>
+                </div>
+                <a href="https://www.correoargentino.com.ar/formularios/cpa" target="_blank">I don't know my zip code</a>
+                <div class="calculo-del-envio">
+                    <!--Aca apareceria el costo del envio, el cual se sumaria al subtotal.-->
+                </div>
+            </div>
+            <div class="total-productos-envio">
+                <h5>
+                    <span>Total:</span>
+                    <strong>$ 45.825,00</strong>
+                </h5>
             </div>
             <div class="formulario">
                 <div class="btn-agregarProductos-finalizar">
-                    <button id="btn-agregarProductos" class="btn-agregarProductos" type="button">AGREGAR MAS PRODUCTOS</button>
-                    <button id="btn-finalizar" class="btn-finalizar" type="button">FINALIZAR</i></button>
+                    <button id="btn-agregarProductos" class="btn-agregarProductos" type="button">ADD MORE PRODUCTS</button>
+                    <button id="btn-finalizar" class="btn-finalizar" type="button">FINALIZE</i></button>
                 </div>
             </div>
         </div>
-
     </main>
 </body>
 </html>

@@ -149,7 +149,7 @@ main {
     font-size: 15px;
 }
 
-.checkbox-JASoft {
+.checkbox-pastilla {
 	display: inline-block;
 	position: relative;
     margin: 3px 0 3vw 3vw;
@@ -160,7 +160,7 @@ main {
 	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.6), 0px 1px 0px rgba(255,255,255,0.3);   
 }
 
-.checkbox-JASoft label {
+.checkbox-pastilla label {
     /* aspecto */
     display: block;
     width: 34px;
@@ -190,12 +190,12 @@ input[type=checkbox] {
 	visibility: hidden;
 }
 
-.checkbox-JASoft input:checked + label {
+.checkbox-pastilla input:checked + label {
 	left: auto;
     right: 5px;
 }
 
-.checkbox-JASoft:after {
+.checkbox-pastilla:after {
 	content: 'NO';
 	font: 12px/30px Arial, sans-serif;
 	color: #B03A2C;
@@ -206,7 +206,7 @@ input[type=checkbox] {
 	text-shadow: 1px 1px 0px rgba(255,255,255,.20);
 }
 
-.checkbox-JASoft:before {
+.checkbox-pastilla:before {
 	content: 'YES';
 	font: 12px/30px Arial, sans-serif;
 	color: #30653C;

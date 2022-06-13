@@ -119,7 +119,7 @@ main {
     border-bottom: #FFFFFF;
 }
 
-.div-input-text, .div-input-email, .div-input-phone, .div-input-password {
+.div-input-text, .div-input-email, .div-input-phone, .div-input-password, .div-input-password-confirm {
     background-color: white;
     border: solid white;
     margin: 5% 0; 
@@ -127,15 +127,46 @@ main {
     height: 40px;
 }
 
-.input-text, .input-email, .input-phone, .input-password {
+.input-text, .input-email, .input-phone, .input-password, .input-password-confirm {
     border: none;
     height: 100%;
-    width: 90%;
+    width: 80%;
     padding-left: 10px;
 }
 
-.div-input-text i, .div-input-email i, .div-input-phone i, .div-input-password i {
+.div-input-text i, .div-input-email i, .div-input-phone i, .div-input-password i, .div-input-password-confirm i {
     margin: 0 1vw;
+}
+
+.div-input-password p, .div-input-password-confirm p {
+    margin: 5px 0px;
+    color: #ADB2B5;
+    font-weight: bold;
+}
+
+.div-input-password-icon, .div-input-password-icon-confirm {
+    display: flex;
+    align-content: center;
+    height: 100%;
+}
+
+.div-input-password-icon .fa-lock, .div-input-password-icon-confirm .fa-lock {
+    padding-top: 9px;
+}
+
+.checkboxPass, .checkboxPassConfirm {
+    display: flex;
+    align-content: center;
+    width: 20%;
+}
+
+.checkboxPass label, .checkboxPassConfirm label {
+    display: flex;
+    align-items: center;
+}
+
+#eye, #eyeConfirm {
+    display: none;
 }
 
 .checkbox {
@@ -237,4 +268,77 @@ input[type=checkbox] {
     font-weight: bold;
     color: #ADB2B5;
     text-decoration: none;
+}
+
+footer {
+    font-family: 'Roboto';
+    background-color: #000000;
+    color: #FFFFFF;
+    margin: 0 2vw 2vw;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.main-footer {
+    margin: 2vW;
+}
+
+.footer-navegacion {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer h4 {
+    width: 100%;
+    padding: 5px 0px;
+}
+
+footer ul {
+    padding: 10px;
+}
+
+footer li {
+    padding: 5px 0px;
+}
+
+.footer-navegacion ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-navegacion li{
+    width: 40%;
+}
+
+.footer-contactenos i {
+    width: 7%;
+}
+
+.footer-redesSociales ul {
+    display: flex;
+}
+
+.footer-redesSociales li {
+    font-size: xx-large;
+    margin-right: 15px;
+}
+
+.footer-redesSociales i {
+    width: 100%;
+}
+
+footer h5 {
+    display: flex;
+    margin: 8px;
+    text-align: left;
+    justify-content: flex-start;
+    color: #c3c6c8;
 }

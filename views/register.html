@@ -6,7 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="/css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a281ea592b.js" crossorigin="anonymous"></script>
+    <script>
+        function mostrarPassword() {
+            let inputPassword = document.getElementById("password");
+            let checkbox = document.getElementById("checkPassword");
+            let iconEyeSlash = document.getElementById("eyeSlash");
+            let iconEye = document.getElementById("eye");
+
+            if(inputPassword.type == "password" && checkbox.checked){
+                inputPassword.type = "text";
+                iconEyeSlash.style.display = "none";
+                iconEye.style.display = "initial";
+            }else{
+                inputPassword.type = "password";
+                iconEyeSlash.style.display = "initial";
+                iconEye.style.display = "none   ";
+            }
+        }
+
+        function mostrarPassword1() {
+            let inputPassword = document.getElementById("passwordConfirm");
+            let checkbox = document.getElementById("checkPasswordConfirm");
+            let iconEyeSlash = document.getElementById("eyeSlashConfirm");
+            let iconEye = document.getElementById("eyeConfirm");
+
+            if(inputPassword.type == "password" && checkbox.checked){
+                inputPassword.type = "text";
+                iconEyeSlash.style.display = "none";
+                iconEye.style.display = "initial";
+            }else{
+                inputPassword.type = "password";
+                iconEyeSlash.style.display = "initial";
+                iconEye.style.display = "none   ";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -33,7 +69,7 @@
                 <li><a href="#">Anteojos para Sol</a></li>
                 <li><a href="#">Lentes de Contacto</a></li>
                 <li><a href="#">Accesorios</a></li> 
-                <li><a href="#">Contacto</a></li>
+                <li><a href="/contact.html">Contacto</a></li>
             </ul>
             <ul class="navbar-right">
                 <li>
@@ -68,10 +104,30 @@
                     <i class="fa-solid fa-phone"></i><input id="phone" class="input-phone" name="phone" type="tel" placeholder="Phone (Optional)">  
                 </div>
                 <div class="div-input-password">
-                    <i class="fa-solid fa-lock"></i><input required id="password" class="input-password" name="password" type="password" placeholder="Password">
-                </div>
-                <div class="div-input-password">
-                    <i class="fa-solid fa-lock"></i><input required id="confirmPassword" class="input-password" name="password" type="password" placeholder="Confirm Password">
+                    <div class="div-input-password-icon">
+                        <i class="fa-solid fa-lock"></i>
+                        <input id="password" class="input-password" name="password" type="password" placeholder="Password">
+                        <div class="checkboxPass">
+                            <input type="checkbox" id="checkPassword" onclick="mostrarPassword()">
+                            <label for="checkPassword">
+                                <i class="fa-solid fa-eye-slash" id="eyeSlash"></i>
+                                <i class="fa-solid fa-eye" id="eye"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>                
+                <div class="div-input-password-confirm">
+                    <div class="div-input-password-icon-confirm">
+                        <i class="fa-solid fa-lock"></i>
+                        <input id="passwordConfirm" class="input-password-confirm" name="password-confirm" type="password" placeholder="Confirm Password">
+                        <div class="checkboxPassConfirm">
+                            <input type="checkbox" id="checkPasswordConfirm" onclick="mostrarPassword1()">
+                            <label for="checkPasswordConfirm">
+                                <i class="fa-solid fa-eye-slash" id="eyeSlashConfirm"></i>
+                                <i class="fa-solid fa-eye" id="eyeConfirm"></i>
+                            </label>
+                        </div>
+                    </div>
                 </div>
                 <div class="checkbox">
                     <div class="text-checkbox">
@@ -91,5 +147,39 @@
             </form>
         </div>
     </main>
+    <footer>
+        <div class="main-footer">
+            <div class="footer-navegacion">
+                <h4>NAVEGACION</h4>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Anteojos Recetados</a></li>
+                    <li><a href="#">Anteojos para Sol</a></li>
+                    <li><a href="#">Lentes de Contacto</a></li>
+                    <li><a href="#">Accesorios</a></li> 
+                    <li><a href="/contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-contactenos">
+                <h4>CONTACTENOS</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-phone"></i>1111111</a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope"></i>opticaRIFF@gmail.com</a></li>
+                    <li><a href="#"><i class="fa-solid fa-location-dot"></i>Av. Siempre Viva 972</a></li>
+                </ul>
+            </div>
+            <div class="footer-redesSociales">
+                <h4>REDES SOCIALES</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <h5>Copyright © 1999-2020 Optica RIFF S.R.L.</h5>
+        </div>
+    </footer>
 </body>
 </html>

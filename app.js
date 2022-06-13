@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static(path.resolve(__dirname,'./public')));
 
 app.get('/', function(req,res){
-    res.sendFile(path.resolve(__dirname,'./views/home.html'))
+    res.sendFile(path.resolve(__dirname,'./views/index.html'))
 })
 
 app.get('/login.html', function(req,res){
@@ -22,6 +22,10 @@ app.get('/cart.html', function(req,res){
 
 app.get('/productCart.html', function(req,res){
     res.sendFile(path.resolve(__dirname,'./views/productCart.html'))
+})
+
+app.get('/contact.html', function(req,res){
+    res.sendFile(path.resolve(__dirname,'./views/contact.html'))
 })
 
 app.listen(3000, function(){

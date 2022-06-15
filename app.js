@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static(path.resolve(__dirname,'./public')));
 
 app.get('/', function(req,res){
-    res.sendFile(path.resolve(__dirname,'./views/index.html'))
+    res.sendFile(path.resolve(__dirname,'./views/home.html'))
 })
 
 app.get('/login.html', function(req,res){
@@ -30,4 +30,8 @@ app.get('/contact.html', function(req,res){
 
 app.listen(3000, function(){
     console.log("Servidor corriendo en puerto 3000");
+})
+
+app.get('/prueba.html', function(req,res){
+    res.sendFile(path.resolve(__dirname,'./views/prueba.html'))
 })

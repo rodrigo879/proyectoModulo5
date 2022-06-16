@@ -87,6 +87,31 @@ body {
 
 .main-navbar {
     display: none;
+    flex-direction: column;
+    /*justify-content: center; */
+    width: 100%;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    top: 180px;
+    height: 40%;
+    z-index: 20;
+}
+
+.main-navbar li {
+    list-style: none;
+    margin: 10px;
+    border-bottom: solid 1px lightgray;
+    height: 30px;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.right-navbar li a i {
+    margin: 10px;
 }
 
 .main-main {
@@ -144,6 +169,11 @@ main section article i{
     top: 87.5vw;
 }
 
+main section article i:hover {
+    transform: rotate(-90deg);
+    transition: all 2s;
+}
+
 section p {
     margin-left: 1em;
 }
@@ -194,6 +224,10 @@ footer ul i {
     font-size: 30px;
 }
 
+footer ul i:hover {
+    color: #B03A2C;
+}
+
 footer h5 {
     display: flex;
     margin: 8px;
@@ -240,6 +274,10 @@ footer h5 {
         margin: 0;
     }
 
+    .main-navbar, .main-navbar li, .main-navbar a {
+        all: unset;
+    }
+
     .main-navbar {
         display: flex;
         flex-direction: row;
@@ -267,8 +305,8 @@ footer h5 {
         text-decoration: none;
     }
 
-    .main-navbar i {
-        margin-left: 0.3em;
+    .right-navbar li a i {
+        margin: 0 0 0 0.3em;
     }
 
     .main-main {
@@ -292,6 +330,9 @@ footer h5 {
         margin: 2%;
         padding-bottom: 1em;
         width: 20em;
+    }
+
+    .main-section-product:hover {
         box-shadow : 0px 0px 10px rgb(100, 100, 100);
     }
 
@@ -319,7 +360,12 @@ footer h5 {
 
     .section-h3 {
         display: initial;
+        opacity: 0;
         margin-top: 5px;
+    }
+
+    .section-h3:hover {
+        opacity: 100;
     }
 
     footer ul {
@@ -369,6 +415,10 @@ footer h5 {
     .main-section-product {
         margin: 1%;
         width: 20em;
+    }
+
+    .main-section-img {
+        height: 76%;
     }
 
     main section article i{

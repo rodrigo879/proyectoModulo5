@@ -8,44 +8,40 @@
     <link rel="stylesheet" href="/css/productCart.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a281ea592b.js" crossorigin="anonymous"></script>
+    <script src="/js/funciones.js"></script>
 </head>
 <body>
-    <header>
-        <div class="main-header">
-            <div class="main-hamburguer">
-                <!--El boton Hamburguesa, que despliega el menu de opciones en la vista movile/tablets-->
-                <a href="#" class="hamburguer-buttom"><i class="fa-solid fa-bars"></i></a>
-                <p>Menú</p>
+    <header class="main-header">
+        <h1 class="title-principal">Mercado Liebre</h1>
+        <div class="main-header-div-top">
+            <div class="main-header-top-bar">
+                <div class="main-logo">
+                        <a href="/"><img src="/images/logo-mercado-liebre.svg"></a>
+                </div>    
+                <form action="/" method="get">
+                    <div class="div-form-buscar-productos">
+                        <label><input class="buscar-productos" value="" type="text" placeholder="Buscar productos.."><a href="#"><i class='fa-solid fa-magnifying-glass'></i></a></label>
+                    </div>
+                </form>
             </div>
-            <div class="main-logo">
-                <a href="/"><img src="/images/logo.png" alt="Optica RIFF"></a>
-            </div>
-            <div class="main-buscar-carrito">
-                <a href="#"><i class='fa-solid fa-magnifying-glass'></i></a>
-                <a href="/login.html"><i class="fa-solid fa-user"></i></a>
-            </div>
-        </div>    
-        <nav class="main-navbar">
-            <ul class="navbar-left">
-                <!--Aca ya estan creados algunos de los links que vamos a poner, hay que ver bien los nombre y ponerlos-->
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Anteojos Recetados</a></li>
-                <li><a href="#">Anteojos para Sol</a></li>
-                <li><a href="#">Lentes de Contacto</a></li>
-                <li><a href="#">Accesorios</a></li> 
-                <li><a href="/contact.html">Contacto</a></li>
-            </ul>
-            <ul class="navbar-right">
-                <li>
-                    <form action="#" method="get" class="buscador">   
-                        <!--Input text para el buscador-->
-                        <div class="buscar-productos">
-                            <input id="search" class="buscar-productos" name="search" value="" type="text" placeholder="Buscar productos.."><a href="#"><i class='fa-solid fa-magnifying-glass'></i></a>
-                        </div>
-                    </form>
-                </li>
-            </ul>
+            
+            <h2 class="copy-header">
+                <i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas y sin tarjeta de crédito
+            </h2>
+        </div>
+        <a class="hamburguer-buttom" id="btn_hamburguer" onclick="desplegarMenu()"><i class="fa-solid fa-bars"></i></a>
+        <nav class="main-navbar" id="mainNavbar">
+                <ul class="left-navbar">
+                    <li class="li-navbar"><a href="/cart">Ofertas</a ></li>
+                    <li class="li-navbar"><a href="#">Tiendas Oficiales</a ></li>
+                    <li class="li-navbar"><a href="#">Vender</a ></li>
+                    <li class="li-navbar"><a href="#">Ayuda</a ></li>
+                </ul>
+                <ul class="right-navbar">
+                    <li class="li-navbar"><a href="/register">Creá tu cuenta<i class="fa-regular fa-credit-card"></i></a ></li>
+                    <li class="li-navbar"><a href="/login">Ingresá<i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+                    <li class="li-navbar"><a href="/productCart">Mis compras<i class="fa-solid fa-cart-shopping"></i></a ></li>
+                </ul>
         </nav>
     </header>
     <main>
@@ -147,38 +143,26 @@
         </div>
     </main>
     <footer>
-        <div class="main-footer">
-            <div class="footer-navegacion">
-                <h4>NAVEGACION</h4>
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Anteojos Recetados</a></li>
-                    <li><a href="#">Anteojos para Sol</a></li>
-                    <li><a href="#">Lentes de Contacto</a></li>
-                    <li><a href="#">Accesorios</a></li> 
-                    <li><a href="/contact.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-contactenos">
-                <h4>CONTACTENOS</h4>
-                <ul>
-                    <li><a href="#"><i class="fa-solid fa-phone"></i>1111111</a></li>
-                    <li><a href="#"><i class="fa-solid fa-envelope"></i>opticaRIFF@gmail.com</a></li>
-                    <li><a href="#"><i class="fa-solid fa-location-dot"></i>Av. Siempre Viva 972</a></li>
-                </ul>
-            </div>
-            <div class="footer-redesSociales">
-                <h4>REDES SOCIALES</h4>
-                <ul>
-                    <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></li>
-                </ul>
-            </div>
-        </div>
+        <ul>
+            <li>
+                <i class="fa-solid fa-credit-card"></i>
+                <h4>Pagá con tarjeta o en efectivo</h4>
+                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+            </li>
+            <li>
+                <i class="fa-solid fa-gift"></i>
+                <h4>Envío gratis desde $ 2.500</h4>
+                <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+            </li>
+            <li>
+                <i class="fa-solid fa-user-shield"></i>
+                <h4>Seguridad, de principio a fin</h4>
+                <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+            </li>
+        </ul>
         <div class="copyright">
-            <h5>Copyright © 1999-2020 Optica RIFF S.R.L.</h5>
+            <h5>Copyright © 1999-2020 Mercado Liebre S.R.L.</h5>
         </div>
-    </footer>
+    </footer>  
 </body>
 </html>

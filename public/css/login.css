@@ -6,63 +6,111 @@
 
 body {
     font-family: 'Roboto';
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
-    background-color: #ADB2B5; 
+    font-size: 12px;
+    background-color: #ebebeb;
 }
 
-h1 {
+.title-principal {
     display: none;
 }
 
-header {
-    padding: 2vw;
-    background-color: white;
-}
-
 .main-header {
-    display: flex;
+    background-color: #EAC926;
+    padding: 20px;
+    width: 100%;
 }
 
-.main-hamburguer, .main-buscar-carrito {
+.main-header-top-bar {
     display: flex;
-    width: 80px;
-    height: 47px;
-    font-size: 18px;
+    flex-wrap: nowrap;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    align-content: center;  
 }
 
-.main-hamburguer a, .main-buscar-carrito a{
-    color: #000000;
+.main-header-top-bar img {
+    display: flex;
+    justify-content: flex-start;
 }
 
-.main-hamburguer p {
-    font-size: 12px;
-    color: #ADB2B5;
-    margin: 4px;
-}
-
-.main-buscar-carrito a {
-    margin-right: 2vw;
+.main-header-top-bar form {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .main-logo {
-    width: 60%;
-    height: 47px;
-    margin: auto;
-    /* border: solid; */
+    width: 50%;
+    padding-right: 10px;
 }
 
-.main-logo img {
+.div-form-buscar-productos {
+    background-color: white;
+    border: solid #EAC926 2px;
+    border-radius: 10px;
     width: 100%;
-    height: 85%;
+    height: 40px;
+    position: relative;
+    padding: 7px 10px;
+}
+
+.div-form-buscar-productos i {
+    position: absolute;
+    right: 0;
+    color: lightgrey;
+    padding-right: 5px;
+    margin-top: 5px;
+}
+
+.buscar-productos {
+    border: none;
+    width: 90%;
+    margin-top: 5px;
+}
+
+.copy-header {
+    font-size: 13px;
+    text-align: center;
+    color: #000000;
+    margin: 1em;
+}
+
+.hamburguer-buttom {
+    background-color: #03264C;;
+    color: white;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
 }
 
 .main-navbar {
     display: none;
+    flex-direction: column;
+    /*justify-content: center; */
+    width: 100%;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    top: 180px;
+    height: 40%;
+}
+
+.main-navbar li {
+    list-style: none;
+    margin: 10px;
+    border-bottom: solid 1px lightgray;
+    height: 30px;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.right-navbar li a i {
+    margin: 10px;
 }
 
 main {
@@ -259,6 +307,13 @@ input[type=checkbox] {
     box-shadow: 2px 2px 5px #8f8f8f;
 }
 
+.btn-login:hover {
+    background-color: #0022AA;
+    border-color: #0022AA;
+    box-shadow: 2px 2px 5px #0022AA;
+    color: #FFFFFF;
+}
+
 .btn-google-facebook {
     display: flex;
     margin-top: 20px;
@@ -301,68 +356,37 @@ input[type=checkbox] {
 }
 
 footer {
-    font-family: 'Roboto';
-    background-color: #000000;
-    color: #FFFFFF;
-    margin: 0 2vw 2vw;
-}
-
-footer li {
-    list-style: none;
-}
-
-footer a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.main-footer {
-    margin: 2vW;
-}
-
-.footer-navegacion {
     display: flex;
     flex-wrap: wrap;
-}
-
-footer h4 {
-    width: 100%;
-    padding: 5px 0px;
+    background-color: #FFFFFF;
 }
 
 footer ul {
-    padding: 10px;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 2em 1.1em 0em 1.1em;
 }
 
 footer li {
-    padding: 5px 0px;
+    margin: 0 auto 2em;
+    width: 85%;
 }
 
-.footer-navegacion ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+footer li h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
-.footer-navegacion li{
-    width: 40%;
+footer ul i {
+    color: #1259c3;
+    font-size: 30px;
 }
 
-.footer-contactenos i {
-    width: 7%;
-}
-
-.footer-redesSociales ul {
-    display: flex;
-}
-
-.footer-redesSociales li {
-    font-size: xx-large;
-    margin-right: 15px;
-}
-
-.footer-redesSociales i {
-    width: 100%;
+footer ul i:hover {
+    color: #B03A2C;
 }
 
 footer h5 {
@@ -373,3 +397,148 @@ footer h5 {
     color: #c3c6c8;
 }
 
+@media (min-width: 481px) {
+    .main-header {
+        position: fixed;
+        padding: 0.5em;
+        z-index: 10;
+    }
+
+    .main-header-div-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-header-top-bar {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 55%;
+    }
+
+    .main-logo  {
+        width: 13em;
+        padding: 0 0.5em;
+    }
+
+    .div-form-buscar-productos {
+        width: 16em;
+        height: 40px;
+    }
+
+    .hamburguer-buttom {
+        display: none;
+    }
+
+    .copy-header {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .main-navbar, .main-navbar li, .main-navbar a {
+        all: unset;
+    }
+
+    .main-navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 0.6em;
+        font-size: 1.2em;
+    }
+
+    .main-navbar ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+
+    .left-navbar {
+        padding-left: 1.4em;
+    }
+
+    .main-navbar ul li {
+        padding-right: 0.5em;
+    }
+
+    .main-navbar a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .right-navbar li a i {
+        margin: 0 0 0 0.3em;
+    }
+
+    main {
+        width: 50%;
+        margin: 0px auto;
+        padding-top: 79px;
+    }
+
+    footer ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 1em 1em 0em;
+    }
+ 
+    footer ul i {
+        font-size: 30px;
+    }
+ 
+    footer li {
+        margin: 0em 1em;
+        width: 100%;
+    }    
+ 
+    footer li h4 {
+        margin-top: 0.5em;
+        font-size: 1.3em;
+    }
+ 
+    footer li p {
+        font-size: 1em;
+    }    
+ 
+    footer h5 {
+        padding-left: 1.5em;
+    }
+}
+
+@media (min-width: 769px) {
+    .main-header-top-bar {
+        width: 65%;
+    }
+
+    .div-form-buscar-productos {
+        width: 30em;
+    }
+
+    main {
+        width: 40%;
+        padding-top: 78px;
+    }
+
+
+    footer {
+        justify-content: center;
+    }
+
+    footer ul {
+        width: 85%;
+        margin: 1em;
+    }
+
+    footer li h4 {
+        font-size: 1.5em;
+    }
+
+    footer li p {
+        font-size: 1em;
+    }
+
+    .copyright {
+        width: 100%;
+     }
+}

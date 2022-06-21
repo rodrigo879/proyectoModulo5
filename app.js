@@ -16,22 +16,8 @@ app.get('/register', function(req,res){
     res.sendFile(path.resolve(__dirname,'./views/register.html'))
 })
 
-app.get('/productCart', function(req,res){
-    res.sendFile(path.resolve(__dirname,'./views/productCart.html'))
-})
-
-app.get('/contact', function(req,res){
-    res.sendFile(path.resolve(__dirname,'./views/contact.html'))
-})
-
-// No Pertenece al proyecto, son pruebas.
-
-app.get('/index', function(req,res){
-    res.sendFile(path.resolve(__dirname,'./views/index.html'))
-})
-
-app.get('/cart', function(req,res){
-    res.sendFile(path.resolve(__dirname,'./views/cart.html'))
+app.get('*', function(req,res){
+    res.sendFile(path.resolve(__dirname,'./views/404.html'))
 })
 
 app.listen(3000, function(){

@@ -298,6 +298,7 @@ footer h5 {
 
     .main-navbar ul li {
         padding-right: 0.5em;
+        cursor: pointer;
     }
 
     .main-navbar a {

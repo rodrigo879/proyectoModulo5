@@ -167,7 +167,7 @@ main {
     border-bottom: #FFFFFF;
 }
 
-.div-input-text, .div-input-date, .div-input-residence, .div-input-password, .div-input-password-confirm {
+.div-input-text, .div-input-date, .div-input-residence, .div-input-imageUser, .div-input-password, .div-input-password-confirm {
     background-color: white;
     border: solid white;
     margin: 5% 0; 
@@ -184,6 +184,10 @@ main {
 
 .div-input-text i, .div-input-date i, .div-input-residence i, .div-input-password i, .div-input-password-confirm i {
     margin: 0 1vw;
+}
+
+.div-input-imageUser i, .input-imageUser {
+    margin: 6px 1vw;
 }
 
 .div-input-password p, .div-input-password-confirm p {
@@ -465,6 +469,7 @@ footer h5 {
 
     .main-navbar ul li {
         padding-right: 0.5em;
+        cursor: pointer;
     }
 
     .main-navbar a {

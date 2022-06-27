@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController')
 
@@ -6,9 +6,9 @@ router.get('/', (req, res) => {
     res.send('respond with a resource');
 });
 
-router.get('/register', userController.register)
+router.get('/registro', userController.registro)
 
-router.get('/login', userController.login)
+router.get('/logearse', userController.logearse)
 
 router.get('/list', userController.list)
 

@@ -25,16 +25,16 @@
             
             <form action="/users/register" method="post" class="formulario">
                 <div class="div-input-text">
-                    <i class="fa-solid fa-id-card"></i><input required id="name" class="input-text" name="name" type="text" placeholder="Name & Last Name">  
+                    <label for="name"><i class="fa-solid fa-id-card"></i><input required id="name" class="input-text" name="name" type="text" placeholder="Name & Last Name"></label>
                 </div>
                 <div class="div-input-text">
-                    <i class="fa-solid fa-user"></i><input required id="userName" class="input-text" name="userName" type="text" placeholder="User Name">  
+                    <label for="userName"><i class="fa-solid fa-user"></i><input required id="userName" class="input-text" name="userName" type="text" placeholder="User Name"></label>
                 </div>
                 <div class="div-input-date">
-                    <i class="fa-solid fa-calendar-days"></i><input required id="date" class="input-date" name="date" type="date">  
+                    <label for="date"><i class="fa-solid fa-calendar-days"></i><input required id="date" class="input-date" name="date" type="date"></label>
                 </div>
                 <div class="div-input-residence">
-                    <i class="fa-solid fa-house"></i><input id="residence" class="input-residence" name="residence" type="text" placeholder="Residence">  
+                    <label for="residence"><i class="fa-solid fa-house"></i><input id="residence" class="input-residence" name="residence" type="text" placeholder="Residence"></label>
                 </div>
                 <div class="div-input-userProfile">
                     <label class="userProfile">User Profile:</label>
@@ -50,11 +50,11 @@
                     <label class="label-radio-check"><input id="vidaSana" class="input-interests" name="interests" value="Vida Sana" type="checkbox">Vida Sana</label>
                 </div>
                 <div class="div-input-imageUser">
-                    <i class="fa-solid fa-house"></i><input id="imageUser" class="input-imageUser" name="imageUser" type="file">  
+                    <label for="imageUser"><i class="fa-solid fa-house"></i><input id="imageUser" class="input-imageUser" name="imageUser" type="file"></label>
                 </div>
                 <div class="div-input-password">
                     <div class="div-input-password-icon">
-                        <i class="fa-solid fa-lock"></i>
+                        <label for="password"><i class="fa-solid fa-lock"></i></label>
                         <input required id="password" class="input-password" name="password" type="password" placeholder="Password">
                         <div class="checkboxPass">
                             <input type="checkbox" id="checkPassword" onclick="mostrarPassword()">
@@ -67,7 +67,7 @@
                 </div>                
                 <div class="div-input-password-confirm">
                     <div class="div-input-password-icon-confirm">
-                        <i class="fa-solid fa-lock"></i>
+                        <label for="passwordConfirm"><i class="fa-solid fa-lock"></i></label>
                         <input required id="passwordConfirm" class="input-password-confirm" name="passwordConfirm" type="password" placeholder="Confirm Password">
                         <div class="checkboxPassConfirm">
                             <input type="checkbox" id="checkPasswordConfirm" onclick="mostrarConfirmPassword()">

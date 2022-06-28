@@ -1,9 +1,25 @@
 let userController = {
-    'registro': function(req, res) {
+    login: (req,res) => {
+        res.render('login');
+    },
+    register: (req,res) => {
         res.render('register');
     },
-    'logearse': function(req, res) {
-        res.render('login');
+    create: (req, res) => {
+        let usuario = {
+            name: req.body.name,
+            userName: req.body.userName,
+            date: req.body.date,
+            residence: req.body.residence,
+            userProfile: req.body.userProfile,
+            interests: req.body.interests,
+            imageUser: req.body.imageUser,
+            password: req.body.password,
+            passwordConfirm: req.body.passwordConfirm,
+            recorderUser: req.body.recorderUser,
+        }
+        res.send(usuario);
+        // res.redirect('/users/list');
     },
     'list': function(req, res) {
         let users = [
@@ -32,7 +48,6 @@ let userController = {
                 usersResult.push(users[i]);
             }
         }
-
         res.render('usersResult', {usersResult: usersResult})
     }
 };

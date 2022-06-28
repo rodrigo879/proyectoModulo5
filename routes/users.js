@@ -6,10 +6,12 @@ router.get('/', (req, res) => {
     res.send('respond with a resource');
 });
 
-router.get('/registro', userController.registro)
+router.get('/register', userController.register);
 
-router.get('/logearse', userController.logearse)
+router.post('/register', userController.create);
 
-router.get('/list', userController.list)
+router.get('/login', userController.login);
+
+router.get('/list', userController.list);
 
 module.exports = router;

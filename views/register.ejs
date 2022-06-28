@@ -23,7 +23,7 @@
                 <p>WELCOME</p>
             </div>
             
-            <form action="/" method="get" class="formulario">
+            <form action="/users/register" method="post" class="formulario">
                 <div class="div-input-text">
                     <i class="fa-solid fa-id-card"></i><input required id="name" class="input-text" name="name" type="text" placeholder="Name & Last Name">  
                 </div>
@@ -38,16 +38,16 @@
                 </div>
                 <div class="div-input-userProfile">
                     <label class="userProfile">User Profile:</label>
-                    <label class="label-radio-check"><input id="comprador" class="input-userProfile" name="userProfile" type="radio" checked>Comprador</label>
-                    <label class="label-radio-check"><input id="vendedor" class="input-userProfile" name="userProfile" type="radio">Vendedor</label>
+                    <label class="label-radio-check"><input id="comprador" class="input-userProfile" name="userProfile" type="radio" value="Comprador" checked>Comprador</label>
+                    <label class="label-radio-check"><input id="vendedor" class="input-userProfile" name="userProfile" type="radio" value="Vendedor">Vendedor</label>
                 </div>
                 <div class="div-input-interests">
                     <label class="interests">Interests:</label>
-                    <label class="label-radio-check"><input id="electro" class="input-interests" name="" type="checkbox" checked>Electro</label>
-                    <label class="label-radio-check"><input id="moda" class="input-interests" name="" type="checkbox">Moda</label>
-                    <label class="label-radio-check"><input id="hogar" class="input-interests" name="" type="checkbox">Hogar</label>
-                    <label class="label-radio-check"><input id="jugueteria" class="input-interests" name="" type="checkbox">Jugueteria</label>
-                    <label class="label-radio-check"><input id="vidaSana" class="input-interests" name="" type="checkbox">Vida Sana</label>
+                    <label class="label-radio-check"><input id="electro" class="input-interests" name="interests" value="Electro" type="checkbox" checked>Electro</label>
+                    <label class="label-radio-check"><input id="moda" class="input-interests" name="interests" value="Moda" type="checkbox">Moda</label>
+                    <label class="label-radio-check"><input id="hogar" class="input-interests" name="interests" value="Hogar" type="checkbox">Hogar</label>
+                    <label class="label-radio-check"><input id="jugueteria" class="input-interests" name="interests" value="Jugueteria" type="checkbox">Jugueteria</label>
+                    <label class="label-radio-check"><input id="vidaSana" class="input-interests" name="interests" value="Vida Sana" type="checkbox">Vida Sana</label>
                 </div>
                 <div class="div-input-imageUser">
                     <i class="fa-solid fa-house"></i><input id="imageUser" class="input-imageUser" name="imageUser" type="file">  
@@ -68,7 +68,7 @@
                 <div class="div-input-password-confirm">
                     <div class="div-input-password-icon-confirm">
                         <i class="fa-solid fa-lock"></i>
-                        <input required id="passwordConfirm" class="input-password-confirm" name="password-confirm" type="password" placeholder="Confirm Password">
+                        <input required id="passwordConfirm" class="input-password-confirm" name="passwordConfirm" type="password" placeholder="Confirm Password">
                         <div class="checkboxPassConfirm">
                             <input type="checkbox" id="checkPasswordConfirm" onclick="mostrarConfirmPassword()">
                             <label for="checkPasswordConfirm">
@@ -83,7 +83,7 @@
                         <label for="checkAvanzado">Recorder User</label>
                     </div>
                     <div class="checkbox-pastilla">
-                        <input type="checkbox" id="checkAvanzado" value="Valor"/>
+                        <input type="checkbox" id="checkAvanzado" name="recorderUser"/>
                         <label for="checkAvanzado"></label>
                     </div>
                 </div>

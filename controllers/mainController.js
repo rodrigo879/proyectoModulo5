@@ -9,16 +9,7 @@ let mainController = {
             { id: 4, nombre: "Smart TV Samsung", descuento: 5, precio: "23.200"},
         ];
         res.render('home',  {'products': products});
-    },
-    login: (req,res) => {
-        res.render('login');
-    },
-    register: (req,res) => {
-        res.render('register');
-    },
-    notFound: (req,res) => {
-        res.render('404');
-    },
+    }
 };
 
 module.exports = mainController;

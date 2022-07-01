@@ -13,7 +13,7 @@ let productosController = {
             res.send("Bienvenidos a los comentarios del producto" + req.params.idProducto + "y estas enfocado en el comentario " + req.params.idComentario);
         }
     },
-    'list': function(req, res) {
+    list: function(req, res) {
         let products = [
             { id: 1, nombre: "Cafetera Moulinex", descuento: 40, precio: 6770},
             { id: 2, nombre: "Macbook Pro 2019", descuento: 20, precio: 230000},

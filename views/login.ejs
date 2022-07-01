@@ -1,16 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/css/login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a281ea592b.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="/images/logo-mercado-liebre.png">
-    <script src="/js/funciones.js"></script>
-</head>
+  
+    <%- include('./partials/head', {variant:'/css/login.css'}) %>
+
 <body>
     
     <%- include('./partials/header') %>
@@ -24,7 +16,7 @@
                 <p>WELCOME</p>
             </div>
             
-            <form action="/" method="get" class="formulario">
+            <form action="/users/login" method="post" class="formulario">
                 <div class="div-input-text">
                     <label for="userName"><i class="fa-solid fa-user"></i><input required id="userName" class="input-text" name="userName" type="text" placeholder="User Name"></label>
                 </div>
@@ -52,7 +44,7 @@
                     </div>
                 </div>
                 <div class="div-btn-login">
-                    <a href="/"><button id="btnLogin" class="btn-login" type="submit">LOGIN</button></a>
+                    <button id="btnLogin" class="btn-login" type="submit">LOGIN</button>
                 </div>
                 <div class="btn-google-facebook">
                     <button id="btnGoogle" class="btn-google" type="button"><i class="fa-brands fa-google"></i></button>

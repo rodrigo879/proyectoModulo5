@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="/css/register.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a281ea592b.js" crossorigin="anonymous"></script>
-    <script src="/js/funciones.js"></script>
-</head>
+
+    <%- include('./partials/head', {variant:'/css/register.css'}) %>
+
 <body>
 
     <%- include('./partials/header') %>
@@ -25,13 +18,13 @@
             
             <form action="/users/register" method="post" class="formulario">
                 <div class="div-input-text">
-                    <label for="name"><i class="fa-solid fa-id-card"></i><input required id="name" class="input-text" name="name" type="text" placeholder="Name & Last Name"></label>
+                    <label for="name"><i class="fa-solid fa-id-card"></i><input id="name" class="input-text" name="name" type="text" placeholder="Name & Last Name"></label>
                 </div>
                 <div class="div-input-text">
-                    <label for="userName"><i class="fa-solid fa-user"></i><input required id="userName" class="input-text" name="userName" type="text" placeholder="User Name"></label>
+                    <label for="userName"><i class="fa-solid fa-user"></i><input id="userName" class="input-text" name="userName" type="text" placeholder="User Name"></label>
                 </div>
                 <div class="div-input-date">
-                    <label for="date"><i class="fa-solid fa-calendar-days"></i><input required id="date" class="input-date" name="date" type="date"></label>
+                    <label for="date"><i class="fa-solid fa-calendar-days"></i><input id="date" class="input-date" name="date" type="date"></label>
                 </div>
                 <div class="div-input-residence">
                     <label for="residence"><i class="fa-solid fa-house"></i><input id="residence" class="input-residence" name="residence" type="text" placeholder="Residence"></label>
@@ -55,7 +48,7 @@
                 <div class="div-input-password">
                     <div class="div-input-password-icon">
                         <label for="password"><i class="fa-solid fa-lock"></i></label>
-                        <input required id="password" class="input-password" name="password" type="password" placeholder="Password">
+                        <input id="password" class="input-password" name="password" type="password" placeholder="Password">
                         <div class="checkboxPass">
                             <input type="checkbox" id="checkPassword" onclick="mostrarPassword()">
                             <label for="checkPassword">
@@ -68,7 +61,7 @@
                 <div class="div-input-password-confirm">
                     <div class="div-input-password-icon-confirm">
                         <label for="passwordConfirm"><i class="fa-solid fa-lock"></i></label>
-                        <input required id="passwordConfirm" class="input-password-confirm" name="passwordConfirm" type="password" placeholder="Confirm Password">
+                        <input id="passwordConfirm" class="input-password-confirm" name="passwordConfirm" type="password" placeholder="Confirm Password" p>
                         <div class="checkboxPassConfirm">
                             <input type="checkbox" id="checkPasswordConfirm" onclick="mostrarConfirmPassword()">
                             <label for="checkPasswordConfirm">

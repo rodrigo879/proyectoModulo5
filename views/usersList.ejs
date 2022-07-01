@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+    <%- include('./partials/head', {variant:'/css/style.css'}) %>
 <html>
     <body>
         <%- include('partials/header.ejs') %>
@@ -14,8 +8,9 @@
             <h1>Users List</h1>
             <ul>
                 <% for(let i = 0; i < users.length; i++) { %>
-                    <li>
-                        <%= users[i].name %>
+                    <li style="list-style: none;">
+                        <label style="width: 250px; display: inline-block;">Nombre y Apellido: <%= users[i].name %></label>
+                        <label>Nombre de usuario: <%= users[i].userName %></label>
                     </li>
                 <% } %>
 
@@ -26,5 +21,6 @@
                 </form>
             </ul>
         </main>
+        <%- include('partials/footer.ejs') %>
     </body>
 </html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head', {variant:'/css/groups.css'}) %>
+
+<body>
+    
+    <main>
+        <div class="container">
+            <% groups.forEach(group => { %>
+                <%- include('group', { group }) %>
+            <% }) %> 
+        </div>
+    </main>
+
+</body>
+</html>

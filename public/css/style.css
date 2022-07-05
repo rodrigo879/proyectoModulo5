@@ -290,6 +290,8 @@ footer h5 {
         display: flex;
         flex-direction: row;
         list-style: none;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     .left-navbar {

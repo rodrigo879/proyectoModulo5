@@ -14,25 +14,26 @@ const HOST = process.env.HOST || 'localhost';
 app.set('view engine', 'ejs');
 
 app.use(express.static('./public'));
+
+// Permite Capturar la informacion enviada mediante POST
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+
+// Permite sobreescribir el metodo POST utilizando PUT y DELETE
 app.use(methodOverride('_method'));
+
+// Middelware a nivel global
 app.use(logMiddleware);
-app.use(session({secret: 'Secreto!!'}))
+
+// Permite mantener una sesion en todas las paginas durante el uso del navegador abierto
+app.use(session({secret: 'Secreto', resave: true, saveUninitialized: true}))
 
 // Rutas
-const groupsRouter = require('./routes/groups');
-
-app.get('/g', (req, res) => {
-    res.redirect('/groups/')
-});
-app.use('/groups', groupsRouter);
-
-app.use('/productos', rutasProductos);
-app.use('/users', rutasUsers);
 app.use('/', rutasMain);
+app.use('/users', rutasUsers);
+app.use('/productos', rutasProductos);
 
-// app.use((req,res,next) => {res.status(404).render('notFound')});
+app.use((req,res,next) => {res.status(404).render('notFound')});
 
 app.listen(PORT, function(){
     console.log(`Server running at http://${HOST}:${PORT}/`);

@@ -1,15 +1,20 @@
 [
-    {
-        "name":"Rodrigo Alvarez",
-        "userName":"rodrigo879",
-        "date":"1989-08-31",
-        "residence":"Lapana 38",
-        "userProfile":"Comprador",
-        "interests":["Electro","Hogar","Jugueteria"],
-        "imageUser":"kisspng-fernet-amaro-liqueur-distilled-beverage-coca-cola-fernet-5b14e7f9c61a03.1497891315280967618114.jpg",
-        "password":"holamundo",
-        "passwordConfirm":"holamundo",
-        "recorderUser":"on",
-        "adminUser": false
-    }
+ {
+  "name": "Rodrigo Alvarez",
+  "userName": "rodrigo879",
+  "date": "1989-08-31",
+  "residence": "Lapana 38",
+  "userProfile": "Vendedor",
+  "interests": [
+   "Electro",
+   "Hogar",
+   "Jugueteria"
+  ],
+  "password": "holamundo",
+  "passwordConfirm": "holamundo",
+  "recorderUser": "on",
+  "admin": true,
+  "image": "user-1657025464948.jpg",
+  "id": 1
+ }
 ]

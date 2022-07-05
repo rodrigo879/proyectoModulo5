@@ -4,9 +4,12 @@
     <%- include('./partials/head', {variant:'/css/style.css'}) %>
 
 <body>
+    <% if(user != undefined) { %>
+        <%- include('./partials/headerRegister') %>
+    <% } else { %>
+        <%- include('./partials/header') %>        
+    <% } %>
 
-    <%- include('./partials/header') %>
-   
     <main class="main-main">
         <div class="main-banner">
             <img src="/images/img-home-banner.jpg" alt="Home Banner">

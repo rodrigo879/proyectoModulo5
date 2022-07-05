@@ -15,19 +15,24 @@
             <div class="saludo-img">
                 <p>WELCOME</p>
             </div>
-            
-            <form action="/users/register" method="post" class="formulario">
+            <form action="/users/register" method="post" class="formulario" enctype="multipart/form-data">
                 <div class="div-input-text">
-                    <label for="name"><i class="fa-solid fa-id-card"></i><input id="name" class="input-text" name="name" type="text" placeholder="Name & Last Name"></label>
+                    <label for="name"><i class="fa-solid fa-id-card"></i><input id="name" class="input-text" name="name" type="text" placeholder="Name & Last Name" value="<%= locals.oldData ? oldData.name : null%>"></label>
+                    <% if (locals.errors && errors.name) { %>
+                        <p style="color: red; margin-top: 10px;"><%- errors.name.msg %></p>
+                    <% } %>
                 </div>
                 <div class="div-input-text">
-                    <label for="userName"><i class="fa-solid fa-user"></i><input id="userName" class="input-text" name="userName" type="text" placeholder="User Name"></label>
+                    <label for="userName"><i class="fa-solid fa-user"></i><input id="userName" class="input-text" name="userName" type="text" placeholder="User Name" value="<%= locals.oldData ? oldData.userName : null%>"></label>
+                    <% if (locals.errors && errors.userName) { %>
+                        <p style="color: red; margin-top: 10px;"><%- errors.userName.msg %></p>
+                    <% } %>
                 </div>
                 <div class="div-input-date">
-                    <label for="date"><i class="fa-solid fa-calendar-days"></i><input id="date" class="input-date" name="date" type="date"></label>
+                    <label for="date"><i class="fa-solid fa-calendar-days"></i><input id="date" class="input-date" name="date" type="date" value="<%= locals.oldData ? oldData.date : null%>"></label>
                 </div>
                 <div class="div-input-residence">
-                    <label for="residence"><i class="fa-solid fa-house"></i><input id="residence" class="input-residence" name="residence" type="text" placeholder="Residence"></label>
+                    <label for="residence"><i class="fa-solid fa-house"></i><input id="residence" class="input-residence" name="residence" type="text" placeholder="Residence" value="<%= locals.oldData ? oldData.residence : null%>"></label>
                 </div>
                 <div class="div-input-userProfile">
                     <label class="userProfile">User Profile:</label>
@@ -43,7 +48,10 @@
                     <label class="label-radio-check"><input id="vidaSana" class="input-interests" name="interests" value="Vida Sana" type="checkbox">Vida Sana</label>
                 </div>
                 <div class="div-input-imageUser">
-                    <label for="imageUser"><i class="fa-solid fa-house"></i><input id="imageUser" class="input-imageUser" name="imageUser" type="file"></label>
+                    <label for="imageUser">
+                        <i class="fa-solid fa-house"></i>
+                        <input id="imageUser" class="input-imageUser" name="imageUser" type="file" value="<%= locals.oldData ? oldData.imageUser : null%>">
+                    </label>
                 </div>
                 <div class="div-input-password">
                     <div class="div-input-password-icon">
@@ -57,11 +65,14 @@
                             </label>
                         </div>
                     </div>
+                    <% if (locals.errors && errors.password) { %>
+                        <p style="color: red; margin-top: 10px;"><%- errors.password.msg %></p>
+                    <% } %>
                 </div>                
                 <div class="div-input-password-confirm">
                     <div class="div-input-password-icon-confirm">
                         <label for="passwordConfirm"><i class="fa-solid fa-lock"></i></label>
-                        <input id="passwordConfirm" class="input-password-confirm" name="passwordConfirm" type="password" placeholder="Confirm Password" p>
+                        <input id="passwordConfirm" class="input-password-confirm" name="passwordConfirm" type="password" placeholder="Confirm Password">
                         <div class="checkboxPassConfirm">
                             <input type="checkbox" id="checkPasswordConfirm" onclick="mostrarConfirmPassword()">
                             <label for="checkPasswordConfirm">
@@ -70,6 +81,9 @@
                             </label>
                         </div>
                     </div>
+                    <% if (locals.errors && errors.passwordConfirm) { %>
+                        <p style="color: red; margin-top: 10px;"><%- errors.passwordConfirm.msg %></p>
+                    <% } %>
                 </div>
                 <div class="checkbox">
                     <div class="text-checkbox">

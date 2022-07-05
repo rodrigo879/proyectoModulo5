@@ -15,15 +15,26 @@
             <div class="saludo-img">
                 <p>WELCOME</p>
             </div>
-            
+            <% if (typeof errors != 'undefined') { %>
+                <p style="color: red">ERROR</p>
+                <ul>
+                    <% for(let i = 0; i < errors.length; i++ ) { %>
+                        <li>
+                            <%- errors[i].msg %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
             <form action="/users/login" method="post" class="formulario">
                 <div class="div-input-text">
-                    <label for="userName"><i class="fa-solid fa-user"></i><input required id="userName" class="input-text" name="userName" type="text" placeholder="User Name"></label>
+                    <label for="userName"><i class="fa-solid fa-user"></i></label>
+                    <input id="userName" class="input-text" name="userName" type="text" placeholder="User Name">
+                    
                 </div>
                 <div class="div-input-password">
                     <div class="div-input-password-icon">
                         <label for="password"><i class="fa-solid fa-lock"></i></label>
-                        <input required id="password" class="input-password" name="password" type="password" placeholder="Password">
+                        <input id="password" class="input-password" name="password" type="password" placeholder="Password">
                         <div class="checkboxPass">
                             <input type="checkbox" id="checkPassword" onclick="mostrarPassword()">
                             <label for="checkPassword">

@@ -36,21 +36,31 @@
                 </div>
                 <div class="div-input-userProfile">
                     <label class="userProfile">User Profile:</label>
-                    <label class="label-radio-check"><input id="comprador" class="input-userProfile" name="userProfile" type="radio" value="Comprador" checked>Comprador</label>
-                    <label class="label-radio-check"><input id="vendedor" class="input-userProfile" name="userProfile" type="radio" value="Vendedor">Vendedor</label>
+                    <% let radioBotton = [{ id: 'comprador', value: 'Comprador'},{id: 'vendedor', value: 'Vendedor' }] %>
+                    <% for( let i = 0; i < radioBotton.length; i++ ) { %>
+                        <label class="label-radio-check"><input id="<%= radioBotton[i].id %>" class="input-userProfile" name="userProfile" type="radio" value="<%= radioBotton[i].value %>" <%= locals.oldData && (oldData.userProfile == radioBotton[i].value) ? 'checked' : null %> > <%= radioBotton[i].value %> </label>
+                    <% } %> 
                 </div>
                 <div class="div-input-interests">
                     <label class="interests">Interests:</label>
-                    <label class="label-radio-check"><input id="electro" class="input-interests" name="interests" value="Electro" type="checkbox" checked>Electro</label>
-                    <label class="label-radio-check"><input id="moda" class="input-interests" name="interests" value="Moda" type="checkbox">Moda</label>
-                    <label class="label-radio-check"><input id="hogar" class="input-interests" name="interests" value="Hogar" type="checkbox">Hogar</label>
-                    <label class="label-radio-check"><input id="jugueteria" class="input-interests" name="interests" value="Jugueteria" type="checkbox">Jugueteria</label>
-                    <label class="label-radio-check"><input id="vidaSana" class="input-interests" name="interests" value="Vida Sana" type="checkbox">Vida Sana</label>
+                    <% let checkbox = [{ id: 'electro', value: 'Electro'}, {id: 'moda', value: 'Moda'}, {id: 'hogar', value: 'Hogar'}, {id: 'jugueteria', value: 'Jugueteria'}, {id: 'vidaSana', value: 'Vida Sana' }] %>
+                    <% for( let i = 0; i < checkbox.length; i++ ) { %>
+                        <label class="label-radio-check"><input id="<%= checkbox[i].id %>" class="input-interests" name="interests" value="<%= checkbox[i].value %>" type="checkbox"
+                            <% if (locals.oldData && oldData.interests) { %>
+                                <% for( let j = 0; j < oldData.interests.length; j++ ) { %>
+                                    <%= locals.oldData && (oldData.interests == checkbox[i].value || oldData.interests[j] == checkbox[i].value) ? 'checked' : null %> 
+                                <% } %>
+                            <% } %>
+                        > <%= checkbox[i].value %> </label>    
+                    <% } %>                    
                 </div>
                 <div class="div-input-imageUser">
                     <label for="imageUser">
                         <i class="fa-solid fa-house"></i>
-                        <input id="imageUser" class="input-imageUser" name="imageUser" type="file" value="<%= locals.oldData ? oldData.imageUser : null%>">
+                        <input id="imageUser" class="input-imageUser" name="imageUser" type="file">
+                        <% if (locals.errors && errors.imageUser) { %>
+                            <p style="color: red; margin-top: 10px;"><%- errors.imageUser.msg %></p>
+                        <% } %>
                     </label>
                 </div>
                 <div class="div-input-password">
@@ -90,7 +100,7 @@
                         <label for="checkAvanzado">Recorder User</label>
                     </div>
                     <div class="checkbox-pastilla">
-                        <input type="checkbox" id="checkAvanzado" name="recorderUser"/>
+                        <input type="checkbox" id="checkAvanzado" name="recorderUser" <%= locals.oldData && oldData.recorderUser ? 'checked' : null %> >
                         <label for="checkAvanzado"></label>
                     </div>
                 </div>

@@ -26,7 +26,6 @@ let userController = {
             }
         } else {
             console.log('Debe ingresar datos')
-            console.log(errors.mapped())
             res.render('register', {errors : errors.mapped(), oldData: req.body});
         }
     },

@@ -11,9 +11,29 @@ const authMiddelware = require('../middelwares/authMiddelware');
 
 let validacionCreateUsers = [
     body('name').notEmpty().withMessage('Debe completar el campo Name'),
-    body('userName').notEmpty().withMessage('Debe completar el campo User Name'),
-    body('password').isLength({min: 8}).withMessage('La contraseña debe ser mayor a 8 caracteres'),
-    body('passwordConfirm').isLength({min: 8}).withMessage('La confirmacion de contraseña debe ser mayor a 8 caracteres'),
+    body('userName')
+        .notEmpty().withMessage('Debe completar el campo User Name').bail()
+        .isLength({min: 3}).withMessage('El nombre de usuario debe tener como minimo 3 caracteres'),
+    body('password')
+        .notEmpty().withMessage('Debes completar el campo contraseña').bail()
+        .isLength({min: 8}).withMessage('La contraseña debe ser mayor a 8 caracteres'),
+    body('passwordConfirm')
+        .notEmpty().withMessage('Debes confirmar tu contraseña').bail()
+        .isLength({min: 8}).withMessage('La confirmacion de contraseña debe ser mayor a 8 caracteres'),
+    body('imageUser').custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+
+        if(!file) {
+            throw new Error('Se debe subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+            }
+        }
+        return true;
+    })
 ];
 
 let validacionLoginUsers = [

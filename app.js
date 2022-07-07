@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 // Middelware a nivel global
-app.use(logMiddleware);
+// app.use(logMiddleware);
 
 // Permite mantener una sesion en todas las paginas durante el uso del navegador abierto
 app.use(session({secret: 'Secreto', resave: true, saveUninitialized: true}))
